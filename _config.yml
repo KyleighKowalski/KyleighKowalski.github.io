@@ -3,8 +3,10 @@ remote_theme: "mmistakes/minimal-mistakes@4.27.3"
 plugins:
   - jekyll-include-cache
 
+minimal_mistakes_skin: "air"
+
 title: "Kyleigh Kowalski"
-description: "Geoscience | GIS | Remote Sensing | Field Work | Data Analysis"
+description: "Geoscience | GIS | Remote Sensing"
 url: "https://kyleighkowalski.github.io"
 
 sass:
