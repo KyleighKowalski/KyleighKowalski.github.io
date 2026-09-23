@@ -9,5 +9,4 @@ title: "Kyleigh Kowalski"
 description: "Geoscience | GIS | Remote Sensing"
 url: "https://kyleighkowalski.github.io"
 
-sass:
-  style: compressed
+custom_css: "/assets/css/main.scss"
