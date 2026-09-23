@@ -6,3 +6,9 @@ plugins:
 title: "Kyleigh Kowalski"
 description: "Geoscience | GIS | Remote Sensing | Field Work | Data Analysis"
 url: "https://kyleighkowalski.github.io"
+
+sass:
+  style: compressed
+
+custom_css:
+  - /assets/css/custom.scss
