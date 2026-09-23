@@ -1,0 +1,148 @@
+/* =========================================================
+   KYLEIGH KOWALSKI — PORTFOLIO DESIGN SYSTEM
+   ========================================================= */
+
+/* ---------- Color palette ---------- */
+
+:root {
+  --navy: #172b3a;
+  --blue: #3d6f8e;
+  --sage: #718c78;
+  --cream: #f7f7f4;
+  --white: #ffffff;
+  --charcoal: #24282b;
+  --muted: #66737a;
+  --border: #dfe4e3;
+}
+
+
+/* ---------- Global typography ---------- */
+
+body {
+  font-family: "Inter", "Helvetica Neue", Arial, sans-serif;
+  color: var(--charcoal);
+  background: var(--cream);
+  line-height: 1.7;
+}
+
+
+/* ---------- Headings ---------- */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Montserrat", "Helvetica Neue", Arial, sans-serif;
+  color: var(--navy);
+  font-weight: 600;
+  letter-spacing: -0.02em;
+}
+
+h1 {
+  font-size: clamp(2.8rem, 6vw, 5rem);
+  line-height: 1.05;
+}
+
+h2 {
+  font-size: clamp(2rem, 4vw, 3rem);
+  line-height: 1.15;
+}
+
+h3 {
+  font-size: 1.5rem;
+}
+
+
+/* ---------- Links ---------- */
+
+a {
+  color: var(--blue);
+  transition: color 0.2s ease;
+}
+
+a:hover {
+  color: var(--navy);
+}
+
+
+/* ---------- Main content width ---------- */
+
+.page {
+  max-width: 1400px;
+}
+
+
+/* ---------- Navigation ---------- */
+
+.masthead {
+  background: rgba(247, 247, 244, 0.96);
+  border-bottom: 1px solid var(--border);
+}
+
+.masthead__menu-item a {
+  color: var(--navy);
+  font-weight: 500;
+  letter-spacing: 0.02em;
+}
+
+.masthead__menu-item a:hover {
+  color: var(--blue);
+}
+
+
+/* ---------- Buttons ---------- */
+
+.btn {
+  border-radius: 4px;
+  font-family: "Montserrat", "Helvetica Neue", Arial, sans-serif;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  padding: 0.8rem 1.4rem;
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease,
+    background-color 0.2s ease;
+}
+
+.btn:hover {
+  transform: translateY(-2px);
+}
+
+
+/* ---------- Images ---------- */
+
+img {
+  border-radius: 3px;
+}
+
+
+/* ---------- Horizontal rules ---------- */
+
+hr {
+  border: 0;
+  border-top: 1px solid var(--border);
+  margin: 4rem 0;
+}
+
+
+/* ---------- Footer ---------- */
+
+.page__footer {
+  background: var(--navy);
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.page__footer a {
+  color: #ffffff;
+}
+
+
+/* ---------- Selection ---------- */
+
+::selection {
+  background: var(--sage);
+  color: white;
+}
