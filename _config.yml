@@ -1,0 +1,8 @@
+remote_theme: "mmistakes/minimal-mistakes@4.27.3"
+
+plugins:
+  - jekyll-include-cache
+
+title: "Kyleigh Kowalski"
+description: "Geoscience | GIS | Remote Sensing | Field Work | Data Analysis"
+url: "https://kyleighkowalski.github.io"
