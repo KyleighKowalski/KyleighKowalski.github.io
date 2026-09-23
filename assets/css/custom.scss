@@ -1,23 +1,35 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Montserrat:wght@500;600;700&display=swap');
+
+
 /* =========================================================
    KYLEIGH KOWALSKI — PORTFOLIO DESIGN SYSTEM
    ========================================================= */
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Montserrat:wght@500;600;700&display=swap');
 
-/* ---------- Color palette ---------- */
+
+/* ---------------------------------------------------------
+   COLOR PALETTE
+   --------------------------------------------------------- */
 
 :root {
-  --navy: #3d4e66;
-  --blue: #3d6f8e;
-  --sage: #718c78;
-  --cream: #f7f7f4;
-  --white: #ffffff;
-  --charcoal: #24282b;
-  --muted: #66737a;
-  --border: #dfe4e3;
+  --navy: #183446;
+  --ocean: #467D98;
+  --sky: #8EB7C8;
+  --sage: #728C78;
+  --cream: #F5F6F2;
+  --white: #FFFFFF;
+  --charcoal: #283238;
+  --muted: #68777D;
+  --border: #DCE3E2;
 }
 
 
-/* ---------- Global typography ---------- */
+/* ---------------------------------------------------------
+   GLOBAL
+   --------------------------------------------------------- */
+
+html {
+  scroll-behavior: smooth;
+}
 
 body {
   font-family: "Inter", "Helvetica Neue", Arial, sans-serif;
@@ -27,7 +39,9 @@ body {
 }
 
 
-/* ---------- Headings ---------- */
+/* ---------------------------------------------------------
+   HEADINGS
+   --------------------------------------------------------- */
 
 h1,
 h2,
@@ -38,7 +52,7 @@ h6 {
   font-family: "Montserrat", "Helvetica Neue", Arial, sans-serif;
   color: var(--navy);
   font-weight: 600;
-  letter-spacing: -0.02em;
+  letter-spacing: -0.025em;
 }
 
 h1 {
@@ -52,14 +66,17 @@ h2 {
 }
 
 h3 {
-  font-size: 1.5rem;
+  font-size: 1.45rem;
+  line-height: 1.3;
 }
 
 
-/* ---------- Links ---------- */
+/* ---------------------------------------------------------
+   LINKS
+   --------------------------------------------------------- */
 
 a {
-  color: var(--blue);
+  color: var(--ocean);
   transition: color 0.2s ease;
 }
 
@@ -68,59 +85,118 @@ a:hover {
 }
 
 
-/* ---------- Main content width ---------- */
-
-.page {
-  max-width: 1400px;
-}
-
-
-/* ---------- Navigation ---------- */
+/* ---------------------------------------------------------
+   HEADER / NAVIGATION
+   --------------------------------------------------------- */
 
 .masthead {
-  background: rgba(247, 247, 244, 0.96);
+  background: var(--white) !important;
   border-bottom: 1px solid var(--border);
+  box-shadow: none;
+}
+
+.masthead__inner-wrap {
+  background: var(--white) !important;
 }
 
 .masthead__menu-item a {
-  color: var(--navy);
+  color: var(--navy) !important;
+  font-family: "Inter", sans-serif;
   font-weight: 500;
   letter-spacing: 0.02em;
 }
 
 .masthead__menu-item a:hover {
-  color: var(--blue);
+  color: var(--ocean) !important;
 }
 
 
-/* ---------- Buttons ---------- */
+/* ---------------------------------------------------------
+   SITE TITLE
+   --------------------------------------------------------- */
+
+.site-title {
+  color: var(--navy) !important;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
+}
+
+.site-title:hover {
+  color: var(--ocean) !important;
+}
+
+
+/* ---------------------------------------------------------
+   BUTTONS
+   --------------------------------------------------------- */
 
 .btn {
-  border-radius: 4px;
-  font-family: "Montserrat", "Helvetica Neue", Arial, sans-serif;
+  font-family: "Montserrat", sans-serif;
   font-weight: 600;
   letter-spacing: 0.04em;
   text-transform: uppercase;
-  padding: 0.8rem 1.4rem;
+
+  border-radius: 4px;
+  border: none;
+
+  padding: 0.85rem 1.5rem;
+
   transition:
     transform 0.2s ease,
     box-shadow 0.2s ease,
     background-color 0.2s ease;
 }
 
-.btn:hover {
+
+/* Primary button */
+
+.btn--primary {
+  background: var(--navy) !important;
+  color: var(--white) !important;
+}
+
+.btn--primary:hover {
+  background: var(--ocean) !important;
+  color: var(--white) !important;
   transform: translateY(-2px);
 }
 
 
-/* ---------- Images ---------- */
+/* Info button */
 
-img {
-  border-radius: 3px;
+.btn--info {
+  background: var(--ocean) !important;
+  color: var(--white) !important;
+}
+
+.btn--info:hover {
+  background: var(--navy) !important;
+  color: var(--white) !important;
+  transform: translateY(-2px);
 }
 
 
-/* ---------- Horizontal rules ---------- */
+/* ---------------------------------------------------------
+   PAGE CONTENT
+   --------------------------------------------------------- */
+
+.page {
+  max-width: 1400px;
+}
+
+
+/* ---------------------------------------------------------
+   IMAGES
+   --------------------------------------------------------- */
+
+img {
+  border-radius: 4px;
+}
+
+
+/* ---------------------------------------------------------
+   HORIZONTAL RULES
+   --------------------------------------------------------- */
 
 hr {
   border: 0;
@@ -129,21 +205,29 @@ hr {
 }
 
 
-/* ---------- Footer ---------- */
+/* ---------------------------------------------------------
+   FOOTER
+   --------------------------------------------------------- */
 
 .page__footer {
-  background: var(--navy);
+  background: var(--navy) !important;
   color: rgba(255, 255, 255, 0.8);
 }
 
 .page__footer a {
-  color: #ffffff;
+  color: var(--sky);
+}
+
+.page__footer a:hover {
+  color: var(--white);
 }
 
 
-/* ---------- Selection ---------- */
+/* ---------------------------------------------------------
+   TEXT SELECTION
+   --------------------------------------------------------- */
 
 ::selection {
-  background: var(--sage);
-  color: white;
+  background: var(--sky);
+  color: var(--navy);
 }
