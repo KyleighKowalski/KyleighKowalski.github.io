@@ -11,6 +11,3 @@ url: "https://kyleighkowalski.github.io"
 
 sass:
   style: compressed
-
-custom_css:
-  - /assets/css/custom.scss
