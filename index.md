@@ -1,9 +1,6 @@
 ---
-layout: splash
-title: "Kyleigh Kowalski"
-header:
-  overlay_color: "#000"
-  overlay_filter: "0.4"
+layout: single
+classes: wide
 ---
 
 # Geoscience · GIS · Remote Sensing
