@@ -253,3 +253,31 @@ code {
 .page__hero {
   display: none !important;
 }
+
+/* =========================================================
+   CLEAN PORTFOLIO NAVIGATION
+   ========================================================= */
+
+.masthead {
+  background: #ffffff !important;
+  border-bottom: 1px solid var(--border) !important;
+}
+
+.masthead__inner-wrap {
+  background: #ffffff !important;
+  max-width: 1400px !important;
+}
+
+.masthead__inner-wrap,
+.masthead .greedy-nav {
+  background-color: #ffffff !important;
+}
+
+.masthead .site-title {
+  background: transparent !important;
+  color: var(--navy) !important;
+}
+
+.masthead .site-title:hover {
+  background: transparent !important;
+}
