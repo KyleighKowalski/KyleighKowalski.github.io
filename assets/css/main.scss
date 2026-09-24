@@ -281,3 +281,51 @@ code {
 .masthead .site-title:hover {
   background: transparent !important;
 }
+
+/* =========================================
+   HOMEPAGE LAYOUT — LEFT ALIGNED / WIDE
+   ========================================= */
+
+.page {
+  max-width: 1500px !important;
+  margin-left: 5vw !important;
+  margin-right: auto !important;
+}
+
+.page__inner-wrap {
+  max-width: none !important;
+}
+
+.page__content {
+  max-width: none !important;
+}
+
+/* Give the homepage more horizontal breathing room */
+.page--wide {
+  max-width: 1500px !important;
+}
+
+/* Keep headings and text left aligned */
+.page__content h1,
+.page__content h2,
+.page__content h3,
+.page__content h4,
+.page__content p {
+  text-align: left;
+}
+
+/* On larger screens, move content further toward the left */
+@media (min-width: 1200px) {
+  .page {
+    margin-left: 6vw !important;
+    margin-right: auto !important;
+  }
+}
+
+/* On smaller screens, use normal margins */
+@media (max-width: 800px) {
+  .page {
+    margin-left: 5vw !important;
+    margin-right: 5vw !important;
+  }
+}
