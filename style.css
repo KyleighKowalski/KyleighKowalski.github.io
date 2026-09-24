@@ -1,0 +1,727 @@
+/* =========================================
+   COLOR PALETTE
+========================================= */
+
+:root {
+    --navy: #183446;
+    --blue: #467d98;
+    --sky: #8eb7c8;
+    --sage: #728c78;
+
+    --cream: #f5f6f2;
+    --white: #ffffff;
+
+    --charcoal: #283238;
+    --muted: #68777d;
+
+    --border: #dce3e2;
+}
+
+
+/* =========================================
+   RESET
+========================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "Inter", sans-serif;
+    color: var(--charcoal);
+    background: var(--white);
+    line-height: 1.7;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+
+/* =========================================
+   TYPOGRAPHY
+========================================= */
+
+h1,
+h2,
+h3 {
+    font-family: "Montserrat", sans-serif;
+    line-height: 1.15;
+    font-weight: 600;
+}
+
+h1 {
+    font-size: clamp(3rem, 6vw, 6rem);
+    letter-spacing: -0.045em;
+}
+
+h2 {
+    font-size: clamp(2.2rem, 4vw, 4rem);
+    letter-spacing: -0.035em;
+}
+
+h3 {
+    font-size: 1.5rem;
+}
+
+.eyebrow {
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 0.18em;
+    color: var(--blue);
+    margin-bottom: 1.25rem;
+}
+
+
+/* =========================================
+   HEADER
+========================================= */
+
+.site-header {
+    width: 100%;
+    background: var(--white);
+    border-bottom: 1px solid var(--border);
+}
+
+.nav-container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 1.4rem 4vw;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.site-name {
+    font-family: "Montserrat", sans-serif;
+    font-size: 1.05rem;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    color: var(--navy);
+}
+
+.main-nav {
+    display: flex;
+    gap: 2.5rem;
+}
+
+.main-nav a {
+    font-size: 0.78rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    color: var(--muted);
+    transition: color 0.2s ease;
+}
+
+.main-nav a:hover {
+    color: var(--blue);
+}
+
+
+/* =========================================
+   HERO
+========================================= */
+
+.hero {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 7rem 4vw 6rem;
+
+    display: grid;
+    grid-template-columns: 0.95fr 1.05fr;
+    gap: 7vw;
+    align-items: center;
+}
+
+.hero-text {
+    max-width: 700px;
+}
+
+.hero h1 {
+    color: var(--navy);
+}
+
+.hero h1 span {
+    color: var(--blue);
+    display: block;
+}
+
+.hero-description {
+    max-width: 600px;
+    margin-top: 2rem;
+
+    font-size: 1.1rem;
+    color: var(--muted);
+}
+
+.hero-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-top: 2.5rem;
+}
+
+
+/* =========================================
+   BUTTONS
+========================================= */
+
+.button {
+    display: inline-block;
+    padding: 0.85rem 1.5rem;
+
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+
+    border: 1px solid transparent;
+
+    transition:
+        transform 0.2s ease,
+        background 0.2s ease,
+        color 0.2s ease;
+}
+
+.button:hover {
+    transform: translateY(-2px);
+}
+
+.button-primary {
+    background: var(--navy);
+    color: var(--white);
+}
+
+.button-primary:hover {
+    background: var(--blue);
+}
+
+.button-secondary {
+    border-color: var(--border);
+    color: var(--navy);
+}
+
+.button-secondary:hover {
+    border-color: var(--blue);
+    color: var(--blue);
+}
+
+
+/* =========================================
+   IMAGE PLACEHOLDERS
+========================================= */
+
+.image-placeholder {
+    position: relative;
+    min-height: 520px;
+
+    background:
+        linear-gradient(
+            135deg,
+            var(--navy),
+            var(--blue) 55%,
+            var(--sky)
+        );
+
+    overflow: hidden;
+}
+
+.image-placeholder::before {
+    content: "";
+    position: absolute;
+    width: 70%;
+    height: 70%;
+
+    right: -15%;
+    top: -15%;
+
+    border: 1px solid rgba(255,255,255,0.3);
+    border-radius: 50%;
+}
+
+.image-placeholder::after {
+    content: "";
+    position: absolute;
+    width: 80%;
+    height: 1px;
+
+    background: rgba(255,255,255,0.3);
+
+    left: 10%;
+    top: 50%;
+}
+
+.placeholder-label {
+    position: absolute;
+    left: 2rem;
+    bottom: 2rem;
+
+    color: white;
+}
+
+.placeholder-label span {
+    display: block;
+
+    font-size: 0.65rem;
+    font-weight: 700;
+    letter-spacing: 0.15em;
+
+    opacity: 0.75;
+    margin-bottom: 0.5rem;
+}
+
+.placeholder-label strong {
+    font-family: "Montserrat", sans-serif;
+    font-size: 1.1rem;
+}
+
+
+/* =========================================
+   INTRO STRIP
+========================================= */
+
+.intro-strip {
+    border-top: 1px solid var(--border);
+    border-bottom: 1px solid var(--border);
+
+    max-width: 1400px;
+    margin: 0 auto;
+
+    padding: 2rem 4vw;
+
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+}
+
+.intro-strip > div {
+    display: flex;
+    flex-direction: column;
+}
+
+.strip-label {
+    font-size: 0.65rem;
+    font-weight: 700;
+    letter-spacing: 0.15em;
+    color: var(--sage);
+    margin-bottom: 0.35rem;
+}
+
+.intro-strip strong {
+    font-size: 0.9rem;
+    font-weight: 600;
+}
+
+
+/* =========================================
+   SECTIONS
+========================================= */
+
+.section {
+    max-width: 1400px;
+    margin: 0 auto;
+
+    padding: 8rem 4vw;
+}
+
+.section-muted {
+    max-width: none;
+    background: var(--cream);
+}
+
+.section-muted > .section-heading,
+.section-muted > .project-grid {
+    max-width: 1400px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.section-heading {
+    display: grid;
+    grid-template-columns: 1fr 0.65fr;
+    gap: 6rem;
+
+    align-items: end;
+
+    margin-bottom: 4rem;
+}
+
+.section-heading > p {
+    color: var(--muted);
+    max-width: 480px;
+}
+
+
+/* =========================================
+   FEATURED RESEARCH
+========================================= */
+
+.research-feature {
+    display: grid;
+    grid-template-columns: 1.1fr 0.9fr;
+    gap: 6vw;
+
+    align-items: center;
+}
+
+.research-image .image-placeholder {
+    min-height: 560px;
+}
+
+.project-type {
+    font-size: 0.65rem;
+    font-weight: 700;
+    letter-spacing: 0.14em;
+    color: var(--sage);
+
+    margin-bottom: 1rem;
+}
+
+.research-text h3 {
+    font-size: clamp(1.7rem, 3vw, 2.6rem);
+    color: var(--navy);
+    margin-bottom: 1.5rem;
+}
+
+.research-text p:not(.project-type) {
+    color: var(--muted);
+    margin-bottom: 1.25rem;
+}
+
+
+/* =========================================
+   TAGS
+========================================= */
+
+.tag-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+
+    margin-top: 2rem;
+}
+
+.tag-list span {
+    border: 1px solid var(--border);
+
+    padding: 0.45rem 0.75rem;
+
+    font-size: 0.7rem;
+    font-weight: 600;
+
+    color: var(--blue);
+    background: var(--white);
+}
+
+
+/* =========================================
+   PROJECT GRID
+========================================= */
+
+.project-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+}
+
+.project-card {
+    background: var(--white);
+    border: 1px solid var(--border);
+
+    transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease;
+}
+
+.project-card:hover {
+    transform: translateY(-6px);
+
+    box-shadow:
+        0 20px 50px rgba(24, 52, 70, 0.08);
+}
+
+.project-card-image {
+    height: 240px;
+
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+
+    padding: 1.5rem;
+
+    background:
+        linear-gradient(
+            135deg,
+            var(--navy),
+            var(--blue)
+        );
+}
+
+.project-card-image span {
+    font-family: "Montserrat", sans-serif;
+    font-size: 3rem;
+    font-weight: 700;
+
+    color: rgba(255,255,255,0.25);
+}
+
+.project-card-content {
+    padding: 2rem;
+}
+
+.project-card-content h3 {
+    color: var(--navy);
+    margin-bottom: 1rem;
+}
+
+.project-card-content p:not(.project-type) {
+    color: var(--muted);
+    font-size: 0.92rem;
+    margin-bottom: 1.5rem;
+}
+
+.text-link {
+    color: var(--blue);
+
+    font-size: 0.75rem;
+    font-weight: 700;
+
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+}
+
+.text-link:hover {
+    color: var(--navy);
+}
+
+
+/* =========================================
+   ABOUT
+========================================= */
+
+.about-section {
+    display: grid;
+    grid-template-columns: 0.3fr 1fr;
+    gap: 8vw;
+}
+
+.about-content {
+    max-width: 900px;
+}
+
+.about-content h2 {
+    color: var(--navy);
+    margin-bottom: 2rem;
+}
+
+.about-content h2 span {
+    color: var(--blue);
+}
+
+.about-content > p {
+    max-width: 700px;
+    color: var(--muted);
+    margin-bottom: 1.2rem;
+}
+
+.skills {
+    margin-top: 3.5rem;
+
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+
+    border-top: 1px solid var(--border);
+}
+
+.skills > div {
+    padding: 1.5rem 0;
+
+    border-bottom: 1px solid var(--border);
+
+    display: flex;
+    flex-direction: column;
+}
+
+.skills strong {
+    color: var(--navy);
+    margin-bottom: 0.25rem;
+}
+
+.skills span {
+    color: var(--muted);
+    font-size: 0.85rem;
+}
+
+
+/* =========================================
+   CONTACT
+========================================= */
+
+.contact-section {
+    background: var(--navy);
+    color: var(--white);
+
+    padding: 8rem 8vw;
+
+    text-align: center;
+}
+
+.contact-section .eyebrow {
+    color: var(--sky);
+}
+
+.contact-section h2 {
+    max-width: 850px;
+    margin: 0 auto 1.5rem;
+}
+
+.contact-section > p:not(.eyebrow) {
+    max-width: 650px;
+    margin: 0 auto;
+
+    color: rgba(255,255,255,0.7);
+}
+
+.contact-links {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+
+    gap: 1rem;
+
+    margin-top: 2.5rem;
+}
+
+.button-light {
+    background: var(--white);
+    color: var(--navy);
+}
+
+.button-outline-light {
+    border-color: rgba(255,255,255,0.35);
+    color: var(--white);
+}
+
+.button-outline-light:hover {
+    border-color: var(--white);
+}
+
+
+/* =========================================
+   FOOTER
+========================================= */
+
+.site-footer {
+    max-width: 1400px;
+    margin: 0 auto;
+
+    padding: 2rem 4vw;
+
+    display: flex;
+    justify-content: space-between;
+
+    color: var(--muted);
+
+    font-size: 0.75rem;
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 900px) {
+
+    .main-nav {
+        gap: 1rem;
+    }
+
+    .hero {
+        grid-template-columns: 1fr;
+        padding-top: 5rem;
+    }
+
+    .hero-visual {
+        order: -1;
+    }
+
+    .hero-visual .image-placeholder {
+        min-height: 400px;
+    }
+
+    .intro-strip {
+        grid-template-columns: 1fr;
+    }
+
+    .section-heading {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+
+    .research-feature {
+        grid-template-columns: 1fr;
+    }
+
+    .project-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .about-section {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+
+    .skills {
+        grid-template-columns: 1fr;
+    }
+}
+
+
+@media (max-width: 600px) {
+
+    .nav-container {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .main-nav {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .hero {
+        padding: 4rem 6vw;
+    }
+
+    .section {
+        padding: 5rem 6vw;
+    }
+
+    .hero-visual .image-placeholder,
+    .research-image .image-placeholder {
+        min-height: 350px;
+    }
+
+    .contact-section {
+        padding: 5rem 6vw;
+    }
+
+    .site-footer {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+}
