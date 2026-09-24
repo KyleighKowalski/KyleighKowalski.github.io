@@ -106,7 +106,7 @@ a:hover {
 
 
 /* =========================================================
-   PAGE BACKGROUND
+   PAGE / HERO AREA
    ========================================================= */
 
 .page {
@@ -115,6 +115,23 @@ a:hover {
 
 .page__content {
   color: var(--charcoal);
+}
+
+/* Remove Minimal Mistakes' dark page-title banner */
+.page__hero {
+  background: var(--cream) !important;
+  background-image: none !important;
+  color: var(--navy) !important;
+  border: none !important;
+}
+
+.page__hero h1,
+.page__hero .page__title {
+  color: var(--navy) !important;
+}
+
+.page__hero .page__lead {
+  color: var(--charcoal) !important;
 }
 
 
@@ -227,4 +244,12 @@ code {
 
 .highlight {
   border-radius: 6px;
+}
+
+/* =========================================================
+   REMOVE DEFAULT PAGE TITLE BANNER
+   ========================================================= */
+
+.page__hero {
+  display: none !important;
 }
